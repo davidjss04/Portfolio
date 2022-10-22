@@ -1,105 +1,80 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { AppBar, Toolbar, useTheme, useMediaQuery } from '@mui/material';
-import { motion, useAnimation } from 'framer-motion';
-import { makeStyles } from 'tss-react/mui';
-import Logo from './Logo';
+import {
+	AppBar,
+	Button,
+	Tab,
+	Tabs,
+	Toolbar,
+	Typography,
+	useMediaQuery,
+	useTheme,
+	Link as MuiLink,
+} from '@mui/material';
+import AddBusinessRoundedIcon from '@mui/icons-material/AddBusinessRounded';
+import LangSelector from './LangSelector';
 import Menu from './Menu';
-import MobileMenu from './MobileMenu';
-import HamburgerIcon from './HamburgerIcon';
-import loaderContext from '../../contexts/loaderContext';
+import Logo from './Logo';
+import { styled } from '@mui/system';
 
 const Navbar = () => {
-	const [homeIsActive, setHomeIsActive] = useState(true);
-	const isMobile = useMediaQuery('(max-width:700px)');
-	const { isLoading } = useContext(loaderContext);
-	const controls = useAnimation();
+	const [value, setValue] = useState();
 	const theme = useTheme();
-	const [scroll, setScroll] = useState(false);
-	const [mobileNavIsOpen, setMobileNavIsOpen] = useState(false);
-	const classes = useStyles({ scroll, isMobile });
-	const handleNav = () => setScroll(window.scrollY > 30);
-	window.addEventListener('scroll', handleNav);
-
-	const hiddenMenu = useMediaQuery((theme) => theme.breakpoints.down('sm'));
-	const hiddenHamburgerIcon = useMediaQuery((theme) =>
-		theme.breakpoints.up('md')
-	);
-	const hiddenMobileMenu = useMediaQuery((theme) => theme.breakpoints.up('md'));
-
-	const appbarVariants = {
-		initial: { height: isMobile ? 70 : 100, boxShadow: theme.shadows[0] },
-		scrolled: { height: theme.navbarHeight, boxShadow: theme.shadows[10] },
-	};
-
-	// useEffect(() => {
-	// 	if (!isLoading) {
-	// 		controls.start({
-	// 			y: 0,
-	// 			transition: {
-	// 				delay: 0.05,
-	// 				type: 'spring',
-	// 				stiffness: 260,
-	// 				damping: 20,
-	// 			},
-	// 		});
-	// 	} else {
-	// 		controls.start({ y: -100 });
-	// 	}
-	// }, [isLoading, controls]);
+	const isMatch = useMediaQuery(theme.breakpoints.down('md'));
 
 	return (
-		<motion.div animate={controls}>
-			<AppBar
-				position="fixed"
-				elevation={0}
-				className={classes.navbar}
-				component="nav"
-			>
-				<Toolbar
-					className={classes.toolbar}
-					component={motion.div}
-					variants={appbarVariants}
-					animate={scroll ? 'scrolled' : 'initial'}
-					transition={{
-						type: 'spring',
-						stiffness: 260,
-						damping: 20,
-					}}
-				>
+		<React.Fragment>
+			<AppBar sx={{ background: theme.palette.background.default }}>
+				<Toolbar>
 					<Logo />
-					{hiddenMenu ? null : <Menu homeIsActive={homeIsActive} />}
-					{hiddenHamburgerIcon ? null : (
-						<HamburgerIcon
-							isOpen={mobileNavIsOpen}
-							onClick={() => setMobileNavIsOpen(!mobileNavIsOpen)}
-						/>
+					{isMatch ? (
+						<>
+							<Menu />
+						</>
+					) : (
+						<>
+							<StyledTabs
+								sx={{ marginLeft: 'auto' }}
+								value={value}
+								onChange={(e, value) => setValue(value)}
+							>
+								<StyledTab label="ABOUT" />
+								<StyledTab label="EXPERIENCE" />
+								<StyledTab label="PROJECTS" />
+								<StyledTab label="CONTACT" />
+							</StyledTabs>
+							<Button
+								component={MuiLink}
+								href="/resume.pdf"
+								color="primary"
+								sx={{ marginLeft: '32px' }}
+								variant="outlined"
+								underline="none"
+							>
+								{'RESUMEN'}
+							</Button>
+							<LangSelector style={{ marginLeft: '32px' }} />
+						</>
 					)}
 				</Toolbar>
-				{hiddenMobileMenu ? null : (
-					<MobileMenu
-						open={mobileNavIsOpen}
-						onClose={() => setMobileNavIsOpen(false)}
-						onOpen={() => setMobileNavIsOpen(true)}
-					/>
-				)}
 			</AppBar>
-			<MobileMenu />
-		</motion.div>
+		</React.Fragment>
 	);
 };
 
-const useStyles = makeStyles((theme) => ({
-	logo: {
-		width: '150px',
+const StyledTab = styled(Tab)(({ theme }) => ({
+	transition: '.2s',
+	minWidth: 120,
+	'&:hover': {
+		color: theme.palette.text.primary,
 	},
-	navbar: {
-		backgroundColor: theme.palette.background.default,
-	},
-	toolbar: {
-		justifyContent: 'space-between',
-		alignItems: 'center',
-		padding: (props) =>
-			props.isMobile ? theme.spacing(0, 2) : theme.spacing(0, 6),
+}));
+
+const StyledTabs = styled(Tabs)(({ theme }) => ({
+	arialLabel: 'styled tabs',
+	indicatorColor: theme.palette.text.primary,
+	textColor: theme.palette.text.primary,
+	'& > span': {
+		maxWidth: 20,
 	},
 }));
 
