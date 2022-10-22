@@ -28,9 +28,6 @@ const Navbar = () => {
 					<Logo />
 					{isMatch ? (
 						<>
-							<Typography sx={{ fontSize: '2rem', paddingLeft: '10%' }}>
-								Shoppee
-							</Typography>
 							<Menu />
 						</>
 					) : (

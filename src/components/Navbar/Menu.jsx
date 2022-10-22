@@ -4,13 +4,16 @@ import {
 	Drawer,
 	IconButton,
 	List,
-	ListItemButton,
+	ListItem,
 	ListItemIcon,
 	ListItemText,
 	useTheme,
+	Link as MuiLink,
+	Button,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import styled from '@emotion/styled';
+import LangSelector from './LangSelector';
 
 const pages = ['ABOUT', 'EXPERIENCE', 'PROJECTS', 'CONTACT'];
 
@@ -33,13 +36,31 @@ const Menu = () => {
 				<Box component="div" sx={{ width: 250 }} role="presentation">
 					<StyledList>
 						{pages.map((page, index) => (
-							<StyledListItem key={index}>
-								<ListItemIcon>
-									<ListItemText>{page}</ListItemText>
-								</ListItemIcon>
-							</StyledListItem>
+							<StyledListItem key={index}>{page}</StyledListItem>
 						))}
 					</StyledList>
+				</Box>
+				<Box
+					component="div"
+					sx={{
+						width: 250,
+						display: 'flex',
+						flexDirection: 'column',
+						alignItems: 'center',
+					}}
+					role="presentation"
+				>
+					<Button
+						component={MuiLink}
+						href="/resume.pdf"
+						color="primary"
+						sx={{ marginTop: '40px' }}
+						variant="outlined"
+						underline="none"
+					>
+						{'RESUMEN'}
+					</Button>
+					<LangSelector style={{ marginTop: '20px' }} />
 				</Box>
 			</Drawer>
 			<IconButton
@@ -57,10 +78,11 @@ const StyledList = styled(List)(({ theme }) => ({
 	marginTop: theme.spacing(4),
 }));
 
-const StyledListItem = styled(ListItemButton)(({ theme }) => ({
+const StyledListItem = styled(ListItem)(({ theme }) => ({
 	display: 'flex',
 	justifyContent: 'center',
 	padding: theme.spacing(2, 0),
+	cursor: 'pointer',
 	'&:hover': {
 		backgroundColor: 'rgb(80,80,80)',
 	},
