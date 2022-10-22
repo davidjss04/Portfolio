@@ -13,6 +13,8 @@ import {
 import AddBusinessRoundedIcon from '@mui/icons-material/AddBusinessRounded';
 import LangSelector from './LangSelector';
 import Menu from './Menu';
+import Logo from './Logo';
+import { styled } from '@mui/system';
 
 const Navbar = () => {
 	const [value, setValue] = useState();
@@ -23,7 +25,7 @@ const Navbar = () => {
 		<React.Fragment>
 			<AppBar sx={{ background: theme.palette.background.default }}>
 				<Toolbar>
-					<AddBusinessRoundedIcon sx={{ transform: 'scale(2)' }} />
+					<Logo />
 					{isMatch ? (
 						<>
 							<Typography sx={{ fontSize: '2rem', paddingLeft: '10%' }}>
@@ -33,23 +35,21 @@ const Navbar = () => {
 						</>
 					) : (
 						<>
-							<Tabs
+							<StyledTabs
 								sx={{ marginLeft: 'auto' }}
-								indicatorColor="secondary"
-								textColor="inherit"
 								value={value}
 								onChange={(e, value) => setValue(value)}
 							>
-								<Tab label="ABOUT" />
-								<Tab label="EXPERIENCE" />
-								<Tab label="PROJECTS" />
-								<Tab label="CONTACT" />
-							</Tabs>
+								<StyledTab label="ABOUT" />
+								<StyledTab label="EXPERIENCE" />
+								<StyledTab label="PROJECTS" />
+								<StyledTab label="CONTACT" />
+							</StyledTabs>
 							<Button
 								component={MuiLink}
 								href="/resume.pdf"
 								color="primary"
-								sx={{ marginLeft: 'auto' }}
+								sx={{ marginLeft: '32px' }}
 								variant="outlined"
 								underline="none"
 							>
@@ -63,5 +63,22 @@ const Navbar = () => {
 		</React.Fragment>
 	);
 };
+
+const StyledTab = styled(Tab)(({ theme }) => ({
+	transition: '.2s',
+	minWidth: 120,
+	'&:hover': {
+		color: theme.palette.text.primary,
+	},
+}));
+
+const StyledTabs = styled(Tabs)(({ theme }) => ({
+	arialLabel: 'styled tabs',
+	indicatorColor: theme.palette.text.primary,
+	textColor: theme.palette.text.primary,
+	'& > span': {
+		maxWidth: 20,
+	},
+}));
 
 export default Navbar;
