@@ -4,7 +4,7 @@ import { Home, About, Projects, Experience, Contact } from '../sections';
 const MainHome = () => {
 	return (
 		<div>
-			<Home />
+			{/* <Home /> */}
 			<About />
 			<Projects />
 			<Experience />

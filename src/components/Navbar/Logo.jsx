@@ -1,9 +1,8 @@
-import React from 'react'
+import React from 'react';
+import { Typography } from '@mui/material';
 
 const Logo = () => {
-  return (
-    <div>DAVIDJSS</div>
-  )
-}
+	return <Typography variant="h6"   >DAVID JSS</Typography>;
+};
 
-export default Logo
+export default Logo;
