@@ -17,7 +17,7 @@ import Logo from './Logo';
 import { styled } from '@mui/system';
 
 const Navbar = () => {
-	const [value, setValue] = useState();
+	const [value, setValue] = useState(0);
 	const theme = useTheme();
 	const isMatch = useMediaQuery(theme.breakpoints.down('md'));
 
