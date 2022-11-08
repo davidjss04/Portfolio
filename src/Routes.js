@@ -12,7 +12,7 @@ const Routes = () => {
 		<>
 			{/* <Loader /> */}
 			{/* <Navbar /> */}
-			{!isMobile ? <Social /> : null}
+			{/* {!isMobile ? <Social /> : null} */}
 			<Rutas>
 				<Route exact path="/" element={<MainHome />} />
 			</Rutas>
