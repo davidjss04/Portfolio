@@ -4,11 +4,12 @@ import { Home, About, Projects, Experience, Contact } from '../sections';
 const MainHome = () => {
 	return (
 		<div>
-			<Home />
+			{/* <Home />
 			<About />
 			<Projects />
 			<Experience />
-			<Contact />
+			<Contact /> */}
+			<h1>This Project is under construction. Please come back later.</h1>
 		</div>
 	);
 };
