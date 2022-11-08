@@ -10,13 +10,13 @@ const Routes = () => {
 
 	return (
 		<>
-			<Loader />
-			<Navbar />
-			{!isMobile ? <Social /> : null}
+			{/* <Loader /> */}
+			{/* <Navbar /> */}
+			{/* {!isMobile ? <Social /> : null} */}
 			<Rutas>
 				<Route exact path="/" element={<MainHome />} />
 			</Rutas>
-			<Footer />
+			{/* <Footer /> */}
 		</>
 	);
 };
