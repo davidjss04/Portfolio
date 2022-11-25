@@ -1,28 +1,29 @@
-import React from 'react';
-import { Container } from '@mui/material';
-import { makeStyles } from 'tss-react/mui';
+import React from "react";
+import { Container } from "@mui/material";
+import { makeStyles } from "tss-react/mui";
+import { styled } from "@mui/system";
 
 const HomeContainer = ({ children, ...rest }) => {
-	const classes = useStyles();
-
-	return (
-		<Container className={classes.Container} {...rest}>
-			{children}
-		</Container>
-	);
+  return <ContainerStyles {...rest}>{children}</ContainerStyles>;
 };
 
-const useStyles = makeStyles((theme) => ({
-	container: {
-		minHeight: '100vh',
-		display: 'flex',
-		alignItems: 'center',
-		paddingTop: `calc( ${theme.spacing(4)}px + ${theme.navbarHeight} ) `,
-		paddingBottom: theme.spacing(4),
-		[theme.breakpoints.down('sm')]: {
-			paddingTop: theme.navbarHeight,
-		},
-	},
+const ContainerStyles = styled(Container)(({ theme }) => ({
+  minHeight: "100vh",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "flex-start",
+  flexWrap: "wrap",
+  gap: theme.spacing(3),
+  paddingBottom: theme.spacing(4),
+  [theme.breakpoints.down("sm")]: {
+    paddingTop: theme.navbarHeight,
+  },
+
+  [theme.breakpoints.up("md")]: {
+    paddingLeft: theme.spacing(8),
+    paddingRight: theme.spacing(8),
+  },
 }));
 
 export default HomeContainer;

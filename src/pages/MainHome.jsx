@@ -5,11 +5,10 @@ const MainHome = () => {
 	return (
 		<div>
 			<Home />
-			{/* <About />
+			<About />
 			<Projects />
 			<Experience />
 			<Contact />
-			<Hero /> */}
 		</div>
 	);
 };
