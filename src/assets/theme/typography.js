@@ -1,6 +1,6 @@
 // eslint-disable-next-line
 export default {
-	fontFamily: ['Cairo', 'Roboto', '"Helvetica Neue"', 'sans-serif'].join(','),
+	fontFamily: ['Calibre', 'Inter', 'San Francisco', 'SF Pro Text'].join(','),
 	h1: {
 		fontWeight: 500,
 		fontSize: 60,
