@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
+import { SectionContainer } from '../containers';
+import { Tabs } from '../components';
 
 const Experience = () => {
-  return (
-    <div>Experience</div>
-  )
-}
+    return (
+        <SectionContainer id='experience' title='Experience' maxWidth="sm" padding="120" reverse>
+            <Tabs />
+        </SectionContainer>
+    );
+};
 
-export default Experience
+export default Experience;

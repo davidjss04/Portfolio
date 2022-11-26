@@ -35,7 +35,7 @@ const LangSelector = (props) => {
 	const currentLanguage = languages.find((elem) => elem.code === t('language'));
 
 	return (
-		<div {...props}>
+		<Box {...props}>
 			<Button
 				variant="contained"
 				color="primary"
@@ -108,7 +108,7 @@ const LangSelector = (props) => {
 					ES
 				</MenuItem>
 			</Menu>
-		</div>
+		</Box>
 	);
 };
 

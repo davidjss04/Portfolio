@@ -1,9 +1,37 @@
-import React from 'react'
+import React from 'react';
+import {
+    Container,
+    Typography,
+    Box,
+    Divider,
+    useMediaQuery,
+} from '@mui/material';
+import Social from '../Social/Social';
+
+import {useTheme } from '@mui/material';
 
 const Footer = () => {
-  return (
-    <div>Footer</div>
-  )
-}
+    const theme = useTheme();
+    const classes = useStyles(theme);
+    const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+    return (
+        <Container>
+            <Divider sx={{ backgroundColor: theme.palette.primary.main }} />
+            <Box sx={classes.footer}>
+                {isMobile && <Social mobile />}
+                <Typography variant='body2' color='initial'>
+                    © 2022 David Huaricancha
+                </Typography>
+            </Box>
+        </Container>
+    );
+};
 
-export default Footer
+const useStyles = (theme) => ({
+    footer: {
+        paddingTop: theme.spacing(4),
+        paddingBottom: theme.spacing(6),
+    },
+});
+
+export default Footer;

@@ -5,83 +5,66 @@ import styled from '@emotion/styled';
 import IconBtn from '../IconBtn/IconBtn.jsx';
 import DarkModeSwitch from '../DarkModeSwitch/DarkModeSwitch';
 import loaderContext from '../../contexts/loaderContext';
+import { classnames } from 'tss-react/tools/classnames.js';
+import { useTheme } from '@mui/system';
 
 const Social = ({ mobile }) => {
-	const { isLoading } = useContext(loaderContext);
+    const theme = useTheme();
+    const classes = styles(theme);
+    const { isLoading } = useContext(loaderContext);
 
-	// useEffect(() => {
+    useEffect(() => {
+        console.log('Social mounted');
+    }, [mobile]);
 
-	// }, [isLoading]);
-
-	if (mobile) {
-		return (
-			<StyledSocialMobile>
-				<IconBtn
-					icon={<GitHub sx={StyledIcon} />}
-					href="https://github.com/davidjss04"
-				/>
-				<IconBtn
-					icon={<LinkedIn />}
-					href="https://www.linkedin.com/in/davidjss04/"
-				/>
-				<IconBtn
-					icon={<Twitter sx={StyledIcon} />}
-					href="https://twitter.com/davidjss04"
-				/>
-				<IconBtn
-					icon={<Instagram sx={StyledIcon} />}
-					href="https://www.instagram.com/davidjss04/"
-				/>
-			</StyledSocialMobile>
-		);
-	} else {
-		return (
-			<StyledSocialDesktop>
-				<IconBtn
-					icon={<GitHub sx={StyledIcon} />}
-					href="https://github.com/davidjss04"
-				/>
-				<IconBtn
-					icon={<LinkedIn sx={StyledIcon} />}
-					href="https://www.linkedin.com/in/davidjss04/"
-				/>
-				<IconBtn
-					icon={<Twitter sx={StyledIcon} />}
-					href="https://twitter.com/davidjss04"
-				/>
-				<IconBtn
-					icon={<Instagram sx={StyledIcon} />}
-					href="https://www.instagram.com/davidjss04/"
-				/>
-				<DarkModeSwitch />
-			</StyledSocialDesktop>
-		);
-	}
+    if (mobile) {
+        return (
+            <Box sx={classes.mobileWrapper}>
+                <IconBtn icon={GitHub} href='https://github.com/davidjss04' />
+                <IconBtn
+                    icon={LinkedIn}
+                    href='https://www.linkedin.com/in/davidjss04/'
+                />
+                <IconBtn icon={Twitter} href='https://twitter.com/davidjss04' />
+                <IconBtn
+                    icon={Instagram}
+                    href='https://www.instagram.com/davidjss04/'
+                />
+            </Box>
+        );
+    } else {
+        return (
+            <Box sx={classes.wrapper}>
+                <IconBtn icon={GitHub} href='https://github.com/davidjss04' />
+                <IconBtn
+                    icon={LinkedIn}
+                    href='https://www.linkedin.com/in/davidjss04/'
+                />
+                <IconBtn icon={Twitter} href='https://twitter.com/davidjss04' />
+                <IconBtn
+                    icon={Instagram}
+                    href='https://www.instagram.com/davidjss04/'
+                />
+                <DarkModeSwitch />
+            </Box>
+        );
+    }
 };
 
-const StyledSocialMobile = styled(Box, {
-	display: 'flex',
-});
-
-const StyledSocialDesktop = styled(Box)(({ theme }) => ({
-	display: 'flex',
-	flexDirection: 'column',
-	alignItems: 'flex-end',
-	position: 'fixed',
-	bottom: 0,
-	right: 0,
-	padding: theme.spacing(2),
-	zIndex: 100,
-}));
-
-const StyledIcon = (theme) => ({
-	color: theme.palette.text.secondary,
-	transition: '0.1s',
-	cursor: 'pointer',
-	fontSize: (props) => (props.fontSize ? `${props.fontSize}px` : '40px'),
-	'&:hover': {
-		color: theme.palette.text.primary,
-	},
+const styles = (theme) => ({
+    wrapper: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'flex-end',
+        position: 'fixed',
+        bottom: 0,
+        right: 0,
+        padding: theme.spacing(2),
+        zIndex: 100,
+    },
+    mobileWrapper: {
+        display: 'flex',
+    },
 });
 
 export default Social;
