@@ -19,7 +19,7 @@ const Footer = () => {
             <Divider sx={{ backgroundColor: theme.palette.primary.main }} />
             <Box sx={classes.footer}>
                 {isMobile && <Social mobile />}
-                <Typography variant='body2' color='initial'>
+                <Typography variant='body2' color='text'>
                     © 2022 David Huaricancha
                 </Typography>
             </Box>

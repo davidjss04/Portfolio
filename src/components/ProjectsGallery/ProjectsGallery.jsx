@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Grid } from '@mui/material';
-import { AnimatePresence, AnimateSharedLayout } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import Card from './Card';
 import ExtendedCard from './ExtendedCard';
 import { projectList } from '../../data';
 import { useTheme } from '@mui/system';
 import { useTranslation } from 'react-i18next';
+import {images} from '../../assets/images';
 
 const ProjectsGallery = () => {
     const theme = useTheme();
@@ -17,7 +18,7 @@ const ProjectsGallery = () => {
 
     return (
         <div>
-            <Grid container spacing={4} sx={classes.galleryContainer}>
+            <Grid container spacing={4} sx={classes.galleryContainer} >
                 {projectList.map((item, key) => (
                     <Grid
                         item
@@ -25,14 +26,14 @@ const ProjectsGallery = () => {
                         sm={6}
                         md={4}
                         key={key}
-                        sx={classes.item}
+                        // sx={classes.item}
                     >
                         <Card
                             id={item.id}
                             title={item.title}
                             overview={t(`projects_${item.id}_overview`)}
                             backgroundImage={item.backgroundImage}
-                            frontImage={item.frontImage}
+                            frontImage={images[item.frontImage]}
                             technologies={item.technologies}
                             onClick={() => setSelectedId(item.id)}
                             initial={{ opacity: 0, y: -50 }}
@@ -51,9 +52,10 @@ const ProjectsGallery = () => {
                         backgroundImage={
                             getSelected(selectedId).backgroundImage
                         }
-                        frontImage={getSelected(selectedId).frontImage}
+                        frontImage={images[getSelected(selectedId).frontImage]}
                         technologies={getSelected(selectedId).technologies}
                         handleClose={() => setSelectedId(null)}
+                        links={getSelected(selectedId).links}
                     />
                 )}
             </AnimatePresence>
@@ -63,9 +65,7 @@ const ProjectsGallery = () => {
 
 const styles = (theme) => ({
     galleryContainer: {
-        overflow: 'visible',
-        width: '100%',
-        margin: '0 auto',
+        marginTop: theme.spacing(2),
     },
     item: {
         overflow: 'visible',

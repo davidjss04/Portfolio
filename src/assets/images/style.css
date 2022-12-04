@@ -85,16 +85,16 @@
 }
 #successAnimationCircle {
     stroke-dasharray: 151px 151px;
-    stroke: #fff;
+    stroke: #8892b0;
 }
 
 #successAnimationCheck {
     stroke-dasharray: 36px 36px;
-    stroke: #fff;
+    stroke:#8892b0;
 }
 
 #successAnimationResult {
-    fill: #fff;
+    fill:#8892b0;
     opacity: 0;
 }
 

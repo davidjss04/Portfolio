@@ -4,8 +4,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import 'flag-icon-css/css/flag-icons.min.css';
 import i18n from 'i18next';
 import { useTranslation } from 'react-i18next';
-import { createTheme, useTheme } from '@mui/material/styles';
-import { ThemeContext } from '@emotion/react';
+import {  useTheme } from '@mui/material/styles';
 
 const languages = [
 	{
@@ -37,7 +36,7 @@ const LangSelector = (props) => {
 	return (
 		<Box {...props}>
 			<Button
-				variant="contained"
+				variant="outlined"
 				color="primary"
 				onClick={(e) => setAnchorEl(e.currentTarget)}
 			>
@@ -70,7 +69,7 @@ const LangSelector = (props) => {
 				}}
 				sx={{
 					'& .MuiPaper-root': {
-						backgroundColor: theme.palette.primary.main,
+						backgroundColor: theme.palette.background.default,
 						marginTop: '2px',
 						boxShadow: theme.shadows[4],
 					},
@@ -80,7 +79,7 @@ const LangSelector = (props) => {
 				<MenuItem
 					sx={{
 						'&:hover': {
-							backgroundColor: theme.backgroundSecondary,
+							backgroundColor: theme.primary,
 						},
 					}}
 					onClick={() => handleClose('en')}

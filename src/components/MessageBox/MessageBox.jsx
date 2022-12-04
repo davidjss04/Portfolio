@@ -10,13 +10,30 @@ import Check from '../../assets/images/Check';
 
 const MessageBox = () => {
     const theme = useTheme();
-    const classes = useStyles();
+    const classes = useStyles(theme);
     const [sending, setSending] = useState(false);
     const [sendEmailSuccess, setSendEmailSuccess] = useState(false);
     const { t } = useTranslation();
 
-    const SendEmail = (values) => {
-        console.log(values);
+    const SendEmail = (object) => {
+        setSending(true);
+        emailjs
+            .send(
+                'service_s97yunc',
+                'template_hdpfhw5',
+                object,
+                '-IjRmBVTwitSaEa-Y'
+            )
+            .then(
+                (result) => {
+                    setSendEmailSuccess(true);
+                    setSending(false);
+                },
+                (error) => {
+                    setSending(false);
+                }
+            );
+        console.log(object);
     };
 
     const formik = useFormik({
@@ -49,6 +66,7 @@ const MessageBox = () => {
                 <AnimatePresence>
                     {!sendEmailSuccess && (
                         <form
+                            ref={formik.ref}
                             className={classes.form}
                             onSubmit={formik.handleSubmit}
                         >
@@ -69,6 +87,7 @@ const MessageBox = () => {
                                 id='name'
                                 label={t('contact_full_name')}
                                 name='name'
+                                color='primary'
                             />
                             <TextField
                                 error={Boolean(
@@ -104,7 +123,7 @@ const MessageBox = () => {
                                 margin='normal'
                                 fullWidth
                                 name='message'
-                                label='Message'
+                                label={t('contact_message')}
                                 type='text'
                                 id='message'
                                 multiline
@@ -115,7 +134,7 @@ const MessageBox = () => {
                                     sx={classes.submitBtn}
                                     type='submit'
                                     fullWidth
-                                    variant='contained'
+                                    variant='outlined'
                                     color='primary'
                                     disabled={sending}
                                 >
@@ -132,7 +151,7 @@ const MessageBox = () => {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.9 }}
-                            sx={{
+                            style={{
                                 position: 'absolute',
                                 top: 0,
                                 height: '100%',
@@ -153,8 +172,8 @@ const MessageBox = () => {
                                 transition={{ delay: 1.5, duration: 1 }}
                                 variant='body2'
                             >
-                                Your message has been successfully sent, i'll
-                                reply as soon as possible.
+                                Tu mensaje ha sido enviado con éxito, nos
+                                pondremos en contacto contigo lo antes posible.
                             </Typography>
                         </Box>
                     )}

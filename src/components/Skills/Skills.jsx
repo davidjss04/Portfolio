@@ -1,6 +1,6 @@
 import React from "react";
 import { Typography, Box, Paper } from "@mui/material";
-import { createTheme, useTheme, styled } from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
 import { skillsList } from "../../data";
 
 const Skills = () => {
@@ -23,10 +23,13 @@ const Skills = () => {
 const StyledContainer = styled("div")(({ theme }) => ({
   maxWidth: "600px",
   display: "flex",
+  justifyContent: "flex-start",
+  gap: "5px",
   flexWrap: "wrap",
 }));
 
 const StyledPaper = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.secondary.main,
   marginRight: "10px",
   marginBottom: "10px",
   minWidth: "50px",

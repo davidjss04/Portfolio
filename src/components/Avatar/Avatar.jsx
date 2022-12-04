@@ -8,10 +8,10 @@ const Avatar = () => {
 
 const StyledAvatar = styled("img")(({ theme }) => ({
   borderRadius: "50%",
-  width: "270px",
-  height: "270px",
+  width: "380px",
+  height: "380px",
   objectFit: "cover",
-  objectPosition: "0 -20px",
+  objectPosition: "0 -5px",
   boxShadow: theme.shadows[10],
 }));
 

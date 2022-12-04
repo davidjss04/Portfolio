@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {
     Card as MuiCard,
     CardContent,
@@ -6,38 +6,53 @@ import {
     Typography,
     IconButton,
     Box,
-} from "@mui/material";
-import {Close} from "@mui/icons-material";
-import { motion } from "framer-motion";
-import { useTheme } from "@mui/material/styles";
+} from '@mui/material';
+import { Close } from '@mui/icons-material';
+import { motion } from 'framer-motion';
+import { useTheme } from '@mui/material/styles';
+import { GitHub, Language } from '@mui/icons-material';
 
-
-const ExtendedCard = ({ id, title, backgroundImage, frontImage, overview, technologies, handleClose, ...rest }) => {
-    const theme  = useTheme();
+const ExtendedCard = ({
+    id,
+    title,
+    backgroundImage,
+    frontImage,
+    overview,
+    technologies,
+    handleClose,
+    links,
+    ...rest
+}) => {
+    const theme = useTheme();
     const classes = useStyles(theme);
 
     return (
         <Box sx={classes.wrapper}>
-            <MuiCard sx={classes.root} elevation={0} component={motion.div} layoutId={id}>
-                <Box sx={{ position: "relative" }}>
+            <MuiCard
+                elevation={0}
+                component={motion.div}
+                layoutId={id}
+                style={classes.root}
+            >
+                <Box sx={{ position: 'relative' }}>
                     <Box>
                         <CardMedia
                             component={motion.div}
                             layoutId={`img-container-${id}`}
-                            sx={classes.media}
+                            style={classes.media}
                             image={backgroundImage}
                             title={title}
                         >
                             <motion.img
                                 layoutId={`front-img-${id}`}
-                                sx={classes.frontImage}
+                                style={classes.frontImage}
                                 src={frontImage}
                                 alt={title}
                             />
                         </CardMedia>
                         <CardContent>
                             <Typography
-                                variant="h5"
+                                variant='h5'
                                 sx={classes.title}
                                 component={motion.h5}
                                 layoutId={`title-${id}`}
@@ -45,113 +60,145 @@ const ExtendedCard = ({ id, title, backgroundImage, frontImage, overview, techno
                                 {title}
                             </Typography>
                             <Typography
-                                variant="body2"
-                                sx={classes.overview}
+                                variant='body2'
                                 component={motion.h5}
+                                style={classes.overview}
                                 layoutId={`overview-${id}`}
                             >
                                 {overview}
                             </Typography>
                             <Typography
-                                variant="body1"
+                                variant='body1'
                                 sx={classes.technologies}
                                 component={motion.h5}
                                 layoutId={`technologies-${id}`}
-                                color="primary"
+                                color='primary'
                             >
-                                {technologies.join(" · ")}
+                                {technologies.join(' · ')}
                             </Typography>
+
+                            <Box
+                                sx={{
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    gap: '30px',
+                                    alignItems: 'center',
+                                    marginTop: '10px',
+                                }}
+                            >
+                                {links.github && (
+                                    <IconButton sx={classes.iconButton} href={links.github}>
+                                        <GitHub sx={{ fontSize: 40 }} />
+                                    </IconButton>
+                                )}
+
+                                {links.url && (
+                                    <IconButton sx={classes.iconButton} href={links.url}>
+                                        <Language sx={{ fontSize: 40 }} />
+                                    </IconButton>
+                                )}
+                            </Box>
                         </CardContent>
                     </Box>
-                    <IconButton sx={classes.closeBtn} onClick={()=>handleClose()}>
-                        <Close  />
+                    <IconButton
+                        sx={classes.closeBtn}
+                        onClick={() => handleClose()}
+                    >
+                        <Close />
                     </IconButton>
                 </Box>
             </MuiCard>
             <motion.div
-                sx={classes.container}
+                style={classes.container}
                 variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
-                intial="hidden"
-                animate="visible"
-                exit="hidden"
+                intial='hidden'
+                animate='visible'
+                exit='hidden'
                 onClick={() => handleClose()}
             ></motion.div>
         </Box>
     );
-}
+};
 
 const useStyles = (theme) => ({
     wrapper: {
-        position: "fixed",
+        position: 'fixed',
+        overflow: 'scroll',
         left: 0,
         right: 0,
         top: 0,
         bottom: 0,
-        zIndex: "10000",
+        zIndex: '10000',
     },
     container: {
-        position: "fixed",
+        position: 'fixed',
         left: 0,
         right: 0,
         top: 0,
         bottom: 0,
-        backgroundColor: "rgba(0,0,0,0.22)",
-        backdropFilter: "blur(2px)",
+        backgroundColor: 'rgba(0,0,0,0.22)',
+        backdropFilter: 'blur(2px)',
         opacity: 0,
     },
     root: {
-        position: "fixed",
+        position: 'fixed',
         left: 0,
         right: 0,
         top: 0,
-        margin: "0 auto",
+        margin: '0 auto',
         marginTop: `calc( ${theme.navbarHeight} + 20px )`,
-        width: "90%",
-        maxWidth: "600px",
-        height: "600px",
-        maxHeight:"80%",
-        zIndex: "10000",
+        width: '100%',
+        maxWidth: '600px',
+        height: 'auto',
+        maxHeight: 'auto',
+        zIndex: '10000',
         boxShadow: theme.shadows[10],
         backgroundColor: theme.palette.secondary.main,
     },
     media: {
-        height: "300px",
-        width: "100%",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "flex-start",
-        overflow: "hidden",
+        height: '100%',
+        width: '100%',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'flex-start',
+        overflow: 'hidden',
     },
     frontImage: {
-        marginTop: "20px",
-        objectFit: "cover",
-        objectPosition: "center top",
-        width: "90%",
+        marginTop: '20px',
+        objectFit: 'cover',
+        objectPosition: 'center top',
+        width: '90%',
         boxShadow: theme.shadows[8],
     },
     title: {
-        fontSize: "20px",
+        fontSize: '20px',
         fontWeight: 700,
         marginBottom: theme.spacing(1),
-        color:theme.palette.secondary.contrastText
+        color: theme.palette.secondary.contrastText,
     },
     overview: {
-        fontSize: "14px",
+        fontSize: '14px',
         marginBottom: theme.spacing(1),
-        color:theme.palette.secondary.contrastText,
-        
+        color: theme.palette.secondary.contrastText,
     },
     technologies: {
-        fontSize: "15px",
-        color:"rgb(10,10,10)",
+        fontSize: '15px',
+        color: theme.palette.primary.main,
     },
     closeBtn: {
-        position: "absolute",
+        position: 'absolute',
         top: 0,
         right: 0,
-        margin:"2px",
-        color:"white"
+        margin: '2px',
+        color: 'white',
+    },
+    iconButton: {
+        color: 'white',
+        backgroundColor: 'rgba(0,0,0,0.22)',
+        '&:hover': {
+            backgroundColor: 'rgba(0,0,0,0.22)',
+        },
     },
 });
 
-export default ExtendedCard
+export default ExtendedCard;

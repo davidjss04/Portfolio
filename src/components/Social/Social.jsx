@@ -1,21 +1,15 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { LinkedIn, Instagram, Twitter, GitHub } from '@mui/icons-material';
-import { Box, Link } from '@mui/material';
-import styled from '@emotion/styled';
+import { Box } from '@mui/material';
 import IconBtn from '../IconBtn/IconBtn.jsx';
 import DarkModeSwitch from '../DarkModeSwitch/DarkModeSwitch';
 import loaderContext from '../../contexts/loaderContext';
-import { classnames } from 'tss-react/tools/classnames.js';
 import { useTheme } from '@mui/system';
 
 const Social = ({ mobile }) => {
     const theme = useTheme();
     const classes = styles(theme);
     const { isLoading } = useContext(loaderContext);
-
-    useEffect(() => {
-        console.log('Social mounted');
-    }, [mobile]);
 
     if (mobile) {
         return (

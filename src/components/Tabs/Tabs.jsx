@@ -138,9 +138,9 @@ const useStyles = (theme, props) => ({
         borderBottom: !props.isMobile
             ? 'none'
             : `1px solid ${theme.palette.secondary.main}`,
-        width: props.isMobile ? 'inherit' : '200px',
-        maxWidth: props.isMobile ? 'inherit' : '200px',
-        minWidth: props.isMobile ? 'inherit' : '200px',
+        width: props.isMobile ? 'inherit' : '350px',
+        maxWidth: props.isMobile ? 'inherit' : '350px',
+        minWidth: props.isMobile ? 'inherit' : '350px',
     },
     indicator: {
         backgroundColor: 'red',

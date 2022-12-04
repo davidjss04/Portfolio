@@ -1,55 +1,95 @@
 const skillsList = [
-    { title: 'React JS', value: 75 },
-    { title: 'Next js', value: 80 },
-    { title: 'Material UI', value: 80 },
-    { title: 'Styled components', value: 80 },
-    { title: 'Node JS ', value: 60 },
-    { title: 'Express JS ', value: 70 },
-    { title: 'Firebase', value: 70 },
+    { title: 'React' },
+    { title: 'Material UI' },
+    { title: 'Redux' },
+    { title: 'React-Router' },
+    { title: 'Styled components' },
+    { title: 'Express JS ' },
+    { title: 'Firebase' },
+    { title: 'Node JS ' },
+    { title: 'MySQL' },
+    { title: 'PostgreSQL' },
+    { title: 'Sequelize' },
+    { title: 'Figma' },
 ];
 const projectList = [
     {
         id: 1,
-        title: 'Tunflix',
-        technologies: ['React JS', 'Node JS', 'MongoDB'],
+        title: 'App Food',
+        technologies: [
+            'React JS',
+            'Node JS',
+            'MariaDB',
+            'Express JS',
+            'CSS Pure',
+            'Sequelize',
+        ],
         backgroundImage:
             'https://cdn.cbeditz.com/cbeditz/preview/black-red-gradient-background-wallpaper-74-11614352798fbqrv1wpuv.jpg',
-        frontImage: 'https://i.ibb.co/L0F7mKX/tunflix.png',
+        frontImage: 'appfood',
+        links: {
+            github: 'https://github.com/davidjss04/PI_Food',
+        },
     },
     {
         id: 2,
-        title: 'Code Hub',
-        technologies: ['React JS'],
+        title: 'Game Script',
+        technologies: [
+            'React JS',
+            'Node JS',
+            'PostgreSQL',
+            'Express JS',
+            'CSS Pure',
+            'Sequelize',
+            'Firebase',
+            'Material UI',
+        ],
         backgroundImage:
             'https://img.freepik.com/free-vector/dark-gradient-background-with-copy-space_53876-99548.jpg?size=626&ext=jpg&ga=GA1.2.2102900112.1628985600',
-        frontImage: 'https://i.ibb.co/zNMJFTW/Webp-net-resizeimage.png',
+        frontImage: 'gamescript',
+        links: {
+            github: 'https://github.com/LeandroLagreca/proyecto-final',
+            url: 'https://game-script.vercel.app/',
+        },
     },
     {
         id: 3,
-        title: 'Burpees.io',
-        technologies: ['React JS', 'Node JS', 'MongoDB'],
+        title: 'Portfolio',
+        technologies: ['React JS', 'Node JS', 'Material UI', 'React-Router'],
         backgroundImage:
             'https://media.istockphoto.com/vectors/abstract-purple-vector-background-with-stripes-vector-id972475894?k=6&m=972475894&s=612x612&w=0&h=99AirGMOb64N2-1ZSMYRjEBp2USrAdzXUGzQMh5o6Js=',
-        frontImage:
-            'https://themes-backend.material-ui.com/wp-content/uploads/2021/05/01_preview.jpg',
+        frontImage: 'portfolio',
+        links: {
+            github: 'https://github.com/davidjss04/web_portfolio',
+            url: 'https://davidjss.com',
+        },
     },
 ];
 
 const experienceList = [
     {
         id: 0,
-        company: 'Code Hub',
+        company: 'Henry',
         links: {
-            website: 'https://www.codehub.tn',
-            facebook: 'https://www.facebook.com/codehubtn/',
-            instagram: 'https://www.instagram.com/codehub.coworking/',
+            instagram: 'https://www.instagram.com/soyhenry_ok/',
+            facebook: 'https://www.facebook.com/soyhenryok',
+            website: 'https://www.soyhenry.com/',
         },
     },
     {
         id: 1,
-        company: 'vapoter.tn',
+        company: 'M.P.T',
         links: {
-            instagram: 'https://www.instagram.com/vapoter.tn/',
+            website: 'https://www.gob.pe/munitambopata',
+            facebook: 'https://www.facebook.com/profile.php?id=100067182301571',
+        },
+    },
+    {
+        id: 2,
+        company: 'Babas.devel',
+        links: {
+            website: 'https://facturadorbabas.com/facturacion/login',
+            facebook: 'https://www.facebook.com/Babas.devel',
         },
     },
 ];

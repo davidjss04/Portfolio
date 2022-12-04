@@ -12,26 +12,28 @@ const SectionContainer = ({
     padding,
     ...rest
 }) => {
+    const classes = useStyles(padding);
+
     return (
-        <StyledContainer component='section' {...rest}>
+        <Container sx={classes} component='section' {...rest}>
             {title && (
                 <StyledTitleContainer component='span' variant='body2'>
                     <Divider width='20%' />
-                    <StyledTitle variant='h4' color='initial'>
+                    <StyledTitle variant='h4' color='text'>
                         {title}
                     </StyledTitle>
                     <Divider fullWidth />
                 </StyledTitleContainer>
             )}
             {children}
-        </StyledContainer>
+        </Container>
     );
 };
 
-const StyledContainer = styled(Container)(({ theme }) => ({
-    paddingTop: theme.spacing(2),
-    paddingBottom: theme.spacing(2),
-}));
+const useStyles = (padding) => ({
+    paddingTop: padding ? `${padding}px` : '80px',
+    paddingBottom: padding ? `${padding}px` : '80px',
+});
 
 const StyledTitleContainer = styled(Typography)(({ theme }) => ({
     marginBottom: theme.spacing(8),
@@ -45,10 +47,6 @@ const StyledTitle = styled(Typography)(({ theme }) => ({
     margin: theme.spacing(0, 4),
     textTransform: 'uppercase',
     whiteSpace: 'nowrap',
-}));
-
-const ChildrenContainer = styled('div')(() => ({
-    minHeight: '100%',
 }));
 
 export default SectionContainer;

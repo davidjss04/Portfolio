@@ -8,8 +8,9 @@ import {
     Box,
 } from '@mui/material';
 import { ArrowDownward } from '@mui/icons-material';
-import { motion, useAnimation } from 'framer-motion';
+import { motion, useAnimationControls } from 'framer-motion';
 import { useTheme } from '@mui/system';
+
 
 const hoverVariants = {
     hover: {
@@ -43,7 +44,8 @@ const Card = ({
 }) => {
     const theme = useTheme();
     const classes = styles(theme);
-    const controls = useAnimation();
+    const controls = useAnimationControls();
+
     const handleMouseEnterControls = () => {
         controls.start('hover');
     };
@@ -51,6 +53,7 @@ const Card = ({
         controls.start('initial');
     };
     controls.start('initial');
+
     return (
         <MuiCard
             sx={classes.root}
@@ -62,17 +65,17 @@ const Card = ({
             onClick={() => onClick()}
             {...rest}
         >
-            <Box>
+            <Box component={'div'}>
                 <CardMedia
                     component={motion.div}
                     layoutId={`img-container-${id}`}
-                    sx={classes.media}
+                    style={classes.media}
                     image={backgroundImage}
                     title={title}
                 >
                     <motion.img
                         layoutId={`front-img-${id}`}
-                        sx={classes.frontImage}
+                        style={classes.frontImage}
                         src={frontImage}
                         alt={title}
                     />
@@ -106,7 +109,6 @@ const Card = ({
                         sx={classes.technologies}
                         component={motion.h5}
                         layoutId={`technologies-${id}`}
-                        color='primary'
                     >
                         {technologies.join(' · ')}
                     </Typography>
@@ -116,18 +118,27 @@ const Card = ({
                 transition={{ delay: 0.15 }}
                 variants={hoverVariants}
                 animate={controls}
-                sx={classes.hover}
+                style={classes.hover}
             >
                 <Box
-                    display='flex'
-                    alignItems='center'
+                    sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                    }}
                     transition={{ delay: 0.3 }}
                     component={motion.div}
                     variants={titleVariants}
                     animate={controls}
+                    display='grid'
+                    gridTemplateRows='1fr 1fr'
+                    gridTemplateColumns='1fr 1fr 1fr 1fr'
+                    gap={2}
                 >
-                    <Box mr={1}>
-                        <Typography variant='h4'>View project</Typography>
+                    <Box mr={1} gridColumn='span 3'>
+                        <Typography variant='h4' sx={{ color: 'text' }}>
+                            View project
+                        </Typography>
                     </Box>
                     <Icon
                         component={motion.div}
@@ -139,6 +150,7 @@ const Card = ({
                         }}
                         variants={{ hover: { y: 7 }, intial: { y: -2 } }}
                         animate='hover'
+                        sx={{ color: 'text' }}
                     >
                         <ArrowDownward />
                     </Icon>
@@ -151,10 +163,10 @@ const Card = ({
 const styles = (theme) => ({
     root: {
         position: 'relative',
-        height: 350,
+        height: 400,
         overflow: 'hidden',
         cursor: 'pointer',
-        backgroundColor: theme.palette.primary.main,
+        backgroundColor: theme.palette.secondary.main,
     },
 
     media: {
@@ -176,23 +188,25 @@ const styles = (theme) => ({
         fontSize: '20px',
         fontWeight: 700,
         marginBottom: theme.spacing(1),
-        color: theme.palette.primary.contrastText,
+        color: theme.palette.text.primary,
     },
     overview: {
         fontSize: '14px',
-        marginBottom: theme.spacing(1),
-        color: theme.palette.primary.contrastText,
+        marginBottom: theme.spacing(4),
+        color: theme.palette.text.primary,
     },
     technologies: {
-        fontSize: '15px',
-        color: 'rgb(10,10,10)',
+        fontSize: '16px',
+        color: theme.palette.primary.main,
+        paddingTop: theme.spacing(3),
+        paddingBottom: theme.spacing(6),
     },
     hover: {
         position: 'absolute',
         top: 0,
         height: '100%',
         width: '100%',
-        backgroundColor: 'rgba(0,0,2,0.97)',
+        backgroundColor: 'rgba(0,0,0,0.97)',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
