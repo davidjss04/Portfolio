@@ -1,9 +1,19 @@
-import React from 'react'
+import React from 'react';
+import { styled } from '@mui/material/styles';
 
-const Divider = () => {
-  return (
-    <div>Divider</div>
-  )
-}
+const Divider = ({ fullWidth, width, ...rest }) => {
+    return (
+        <StyledDivider
+            sx={[fullWidth ? { width: '100%' } : { width: width }]}
+            {...rest}
+        ></StyledDivider>
+    );
+};
 
-export default Divider
+const StyledDivider = styled('div')(({ theme }) => ({
+    display: 'inline',
+    height: '2px',
+    backgroundColor: theme.palette.secondary.main,
+}));
+
+export default Divider;

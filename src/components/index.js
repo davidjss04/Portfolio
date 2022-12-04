@@ -6,3 +6,7 @@ export { default as VideoLogo } from './VideoLogo/VideoLogo';
 export { default as Avatar } from './Avatar/Avatar';
 export { default as Divider } from './Divider/Divider';
 export { default as Skills } from './Skills/Skills';
+export { default as ProjectsGallery } from './ProjectsGallery/ProjectsGallery';
+export { default as Tabs } from './Tabs/Tabs';
+export { default as IconBtn } from './IconBtn/IconBtn';
+export { default as MessageBox } from './MessageBox/MessageBox';

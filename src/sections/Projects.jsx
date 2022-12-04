@@ -1,9 +1,20 @@
-import React from 'react'
+import React from 'react';
+import { SectionContainer } from '../containers';
+import { ProjectsGallery } from '../components';
+import { useTranslation } from 'react-i18next';
 
 const Projects = () => {
-  return (
-    <div>Projects</div>
-  )
-}
+    const { t } = useTranslation();
 
-export default Projects
+    return (
+        <SectionContainer
+            id='projects'
+            title={t('menu_projects')}
+            maxWidth='md'
+        >
+            <ProjectsGallery />
+        </SectionContainer>
+    );
+};
+
+export default Projects;
