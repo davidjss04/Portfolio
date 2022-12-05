@@ -28,7 +28,7 @@ const Home = () => {
             {' '}
             <Typewriter
                 options={{
-                    strings: t('home_my_jobs').split(','),
+                    strings: t('home_my_jobs').split('-'),
                     autoStart: true,
                     delay: 'natural',
                     pauseFor: 4000,
