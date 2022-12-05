@@ -1,46 +1,48 @@
 {
     "language": "en",
-    "dark_mode": "Modo oscuro",
+    "dark_mode": "Dark mode",
 
-    "home_welcome": "Hola, Yo soy David Huaricancha.",
-    "home_what_i_do": "Construyó cosas asombrosas para la web.",
-    "home_my_jobs": "Soy un Ingeniero de Software.,Soy un Desarrollador Web.,Soy un Desarrollador React.,Soy un Desarrollador Frontend.,Soy un Contribuidor de Open Source.,Soy un Entusiasta de la Tecnología.",
-    "home_btn_contact": "Contactame",
+    "home_welcome": "Hi 👋, I'm David Huaricancha. 👨‍💻",
+    "home_what_i_do": "I build amazing things for the web. 👷‍♂️ 🚀",
+    "home_my_jobs": "I'm a Software Engineer.,I'm a Web Developer.,I'm a React Developer.,I'm a Frontend Developer.,I'm an Open Source Contributor.,I'm a Technology Enthusiast.",
+    "home_btn_contact": "Contact me 🤙",
 
-    "menu_about": "Sobre mi",
-    "menu_projects": "Proyectos",
-    "menu_experience": "Experiencia",
-    "menu_contact": "Contacto",
-    "menu_resume": "Curriculum",
+    "menu_about": "About me",
+    "menu_projects": "Projects",
+    "menu_experience": "Experiences",
+    "menu_contact": "Contact",
+    "menu_resume": "Resume",
 
-    "about_desc_1": "Front End Developer con background como Ingeniero Informático. 👨‍💻 Experiencia trabajando en React, Redux, Material UI, Node.js, PostgreSQL entre otras tecnologías del sector. Forme parte de un equipo para la creación de un E-commerce de venta y compra de videojuegos fomentando buenas prácticas de programación y patrones de diseño que permiten un rendimiento óptimo para su posicionamiento en la red. Me caracterizo por la capacidad de resolución de problemas, trabajo en equipo, pensamiento creativo, comunicación y autonomía. 👬",
-    "about_desc_2": "Actualmente sigo profundizando mis conocimientos, aprendiendo nuevas tecnologías como TypeScript y Next.js, mejorando mi portafolio y realizando proyectos personales para que tengan un impacto positivo en la sociedad. Soy consiente de la relevancia que tiene el idioma ingles en esta industria, es por eso que sigo mejorando mi nivel. 👷‍♂️🏗",
-    "about_desc_3": "En mi tiempo libre, me deleito con los placeres de la vida, como salir a manejar bicicleta, 🚴‍♂️ ir al gimnasio,🏋️‍♂️ o tomar un café. ☕ (Me encanta el café ❣) Disfruto descubriendo los secretos de la vida a través de la lectura 📚 y entiendo que siempre nos encontramos en un desarrollo 🧘‍♂️ y que mejor que aprenderlo de los demás. No revientes la rueda. 🌀",
-    "about_desc_4": "No dude en enviarme un mensaje si desea saber más acerca de mí. Siempre estoy ansioso por saber de los demás y expandir mi red en LinkedIn. ¿Te gusta el café, la lectura, viajar o bailar? Charlemos un rato de eso. 👇",
+    "about_desc_1": "Front End Developer with a background as a Computer Engineer. 👨‍💻 Experience working on React, Redux, Material UI, Node.js, PostgreSQL among other technologies in the sector. Be part of a team for the creation of an E-commerce for the sale and purchase of video games, promoting good programming practices and design patterns that allow optimal performance for your positioning on the web. I characterize myself by the ability to solve problems, teamwork, creative thinking, communication and autonomy. 👬",
+    "about_desc_2": "Currently I continue to deepen my knowledge, learning new technologies such as TypeScript and Next.js, improving my portfolio and carrying out personal projects so that they have a positive impact on society. I am aware of the relevance that the English language has in this industry, that is why I continue to improve my level. 👷‍♂️🏗",
+    "about_desc_3": "In my free time I delight in the pleasures of life, like going out for a bike ride, ♂️ 🚴 going to the gym, ♂️ 🏋️ or having a coffee. ☕ (I love coffee❣) I enjoy discovering the secrets of life through reading 📚 and I understand that we are always in development ♂️ 🧘 and what better than learning from others. Don't break the wheel. 🌀",
+    "about_desc_4": "Siéntete libre de enviarme un mensaje si quieres saber más sobre mí. Siempre estoy ansioso por saber de los demás y expandir mi red en LinkedIn. ¿Te gusta el café, leer, viajar o bailar? Charlemos un rato sobre ello. Skills 👇",
 
     "experience_0_job": "Front End Developer [Academic]",
-    "experience_0_overview": "Bootcamp de 6 meses de duración, enfocado en el desarrollo de aplicaciones web con React, Redux, Node.js, Express, PostgreSQL, entre otras tecnologías. Realice proyectos personales y colaborativos para mejorar mis habilidades y conocimientos. 🚀  Trabaje con la metodología SCRUM, utilizando herramientas como Trello y Slack para la comunicación y organización del equipo. 📝",
-    "experience_0_duration": "Octubre 2022 - Noviembre 2022",
+    "experience_0_overview": "6-month bootcamp, focused on the development of web applications with React, Redux, Node.js, Express, PostgreSQL, among other technologies. Carry out personal and collaborative projects to improve my skills and knowledge. 🚀 Work with the SCRUM methodology, using tools such as Trello and Slack for team communication and organization. 📝",
+    "experience_0_duration": "Octover 2022 - November 2022",
 
-    "experience_1_job": "Asistente de computación",
-    "experience_1_overview": "Asesoría y apoyo con el uso correcto de los activos TI al personal administrativo. Mantener y actualizar la información publicada en la página web de la entidad.Administrar el uso correcto de la infraestructura de red de la entidad.",
-    "experience_1_duration": "Julio 2021 - December 2021",
+    "experience_1_job": "Aomputer Assistant",
+    "experience_1_overview": "I was in charge of the maintenance of the computer equipment of the company, as well as the installation of new equipment. I also provided technical support to the users of the company. 🖥️",
+    "experience_1_duration": "July 2021 - December 2021",
 
-    "experience_2_job": "Becario de ingeniería de software",
-    "experience_2_overview": "Desarrollar sistemas y herramientas con énfasis en el rendimiento y la escalabilidad, mantener bases de datos, documentos funcionales y técnicos.Incremente el rendimiento de las aplicaciones en un 35% a través del correcto uso de los patrones de diseño y buenas prácticas de manejo de datos.Desarrolle un sistema de información para la gestión administrativa y logística de empresas comerciales.",
-    "experience_2_duration": "Febrero 2019 - Mayo 2019",
+    "experience_2_job": "Software Engineering Internship",
+    "experience_2_overview": "Advice and support with the correct use of IT assets to administrative staff. Maintain and update the information published on the entity's website. Manage the correct use of the entity's network infrastructure.",
+    "experience_2_duration": "February 2019 - May 2019",
 
-    "projects_1_overview": "Aplicacion Web para la gestion de resetas de cocina.",
-    "projects_1_extended_overview": "Proyecto individual desarrollado dentro de Henry Bootcamp Desarrollo de una SPA (Single Page Application) utilizando React para el Front End y Redux como state management. Todos los componentes fueron desarrollados con CSS sin uso de librerías externas. La SPA consume datos de una API (“Spoonacular API”) a través de un Back End desarrollado en Node.JS utilizando Express, agregando nuevas funcionalidades a la API original como el uso del ORM Sequelize para poder conectarse a una base de datos PostgresSQL y porder almacenar los datos creados por el usuario.",
+    "projects_1_overview": "Web application for managing cooking recipes.",
+    "projects_1_extended_overview": "Individual project developed within Henry Bootcamp Development of a SPA (Single Page Application) using React for the Front End and Redux as state management. All components were developed with CSS without the use of external libraries. The SPA consumes data from an API (“Spoonacular API”) through a Back End developed in Node.JS using Express, adding new features to the original API such as the use of the ORM Sequelize to be able to connect to a PostgresSQL database and can store the data created by the user.",
 
-    "projects_2_overview": "GameScript es una plataforma de venta y compra de videojuegos.",
-    "projects_2_extended_overview": "Proyecto Grupal desarrollado dentro de Henry Bootcamp Desarrollo de un E-COMMERCE, para la venta y compra de Videojuego utilizando React para el Front End y Redux Toolkit como state management. Todos los componentes fueron estilizados con el Framework Material UI. La App consume datos a través de un Back End desarrollado en Node.JS utilizando Express, y para la conexión a la base de datos se utilizó el ORM Sequelize con el motor de base de datos PostgresSQL. Mi aporte principal al proyecto fue la parte del Front End, aplicando buenas practicas de Front End, estilizando componentes con Material UI, reutilizando componentes y aplicando Stripe para el metodo de pago.",
+    "projects_2_overview": "GameScript is a platform for buying and selling video games.",
+    "projects_2_extended_overview": "Group project developed within Henry Bootcamp Development of an E-COMMERCE, for the purchase and sale of Video Games using React for the Front End and Redux Toolkit as state management. All components were designed using the Material UI Framework. The App consumes data through a Back End developed in Node.JS using Express, and for the connection to the database the Sequelize ORM with the PostgresSQL database engine was used. My main contribution to the project was the Front End part, applying good Front End practices, styling components with Material UI, reusing components and applying Stripe for the payment method.",
 
-    "projects_3_overview": "Portfolio personal. Una pagina web para mostrar mis proyectos.",
-    "projects_3_extended_overview": "Proyecto individual desarrollador con React, Material UI y CSS. El objetivo de este proyecto es mostrar mis proyectos y habilidades como desarrollador Front End. La pagina consume datos de un archivo JSON para mostrar los proyectos y sus detalles. La pagina esta optimizada para dispositivos moviles y desktop.",
+    "projects_3_overview": "Personal portfolio. A web page to show my projects.",
+    "projects_3_extended_overview": "Individual developer project with React, Material UI and CSS. The objective of this project is to show my projects and skills as a Front End developer. The page consumes data from a JSON file to display the projects and their details. The page is optimized for mobile and desktop devices.",
 
-    "contact_full_name": "Nombre Completo",
-    "contact_email": "Correo Electrónico",
-    "contact_message": "Mensaje",
-    "contact_btn": "Enviar Mensaje"
+    "contact_full_name": "Full Name",
+    "contact_email": "Email Address",
+    "contact_message": "Message",
+    "contact_btn": "Send Message",
+
+    "message_sent_success": "You message has been sent successfully! I will get back to you as soon as possible."
 }
