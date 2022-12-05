@@ -4,111 +4,114 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import 'flag-icon-css/css/flag-icons.min.css';
 import i18n from 'i18next';
 import { useTranslation } from 'react-i18next';
-import {  useTheme } from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 
 const languages = [
-	{
-		code: 'es',
-		name: 'ES',
-		country_code: 'es',
-	},
-	{
-		code: 'en',
-		name: 'EN',
-		country_code: 'gb',
-	},
+    {
+        code: 'es',
+        name: 'ES',
+        country_code: 'es',
+    },
+    {
+        code: 'en',
+        name: 'EN',
+        country_code: 'gb',
+    },
 ];
 
 const LangSelector = (props) => {
-	const [anchorEl, setAnchorEl] = useState(null);
-	const theme = useTheme();
-	const { t } = useTranslation();
-	const handleClose = (code) => {
-		i18n.changeLanguage(code);
-		setAnchorEl(null);
-		if (props.onClose) {
-			props.onClose();
-		}
-	};
+    const [anchorEl, setAnchorEl] = useState(null);
+    const theme = useTheme();
+    const { t } = useTranslation();
 
-	const currentLanguage = languages.find((elem) => elem.code === t('language'));
+    const handleClose = (code) => {
+        i18n.changeLanguage(code);
+        setAnchorEl(null);
+        if (props.onClose) {
+            props.onClose();
+        }
+    };
 
-	return (
-		<Box {...props}>
-			<Button
-				variant="outlined"
-				color="primary"
-				onClick={(e) => setAnchorEl(e.currentTarget)}
-			>
-				{currentLanguage && (
-					<>
-						<Box
-							component={'span'}
-							sx={{ marginRight: theme.spacing(1) }}
-							className={`flag-icon flag-icon-${currentLanguage.country_code}`}
-						/>
-						{currentLanguage.name}
-					</>
-				)}
-				<KeyboardArrowDownIcon sx={{ color: 'white' }} />
-			</Button>
-			<Menu
-				id="profile-menu"
-				anchorEl={anchorEl}
-				open={Boolean(anchorEl)}
-				onClose={() => setAnchorEl(null)}
-				keepMounted
-				elevation={0}
-				anchorOrigin={{
-					vertical: 'bottom',
-					horizontal: 'center',
-				}}
-				transformOrigin={{
-					vertical: 'top',
-					horizontal: 'center',
-				}}
-				sx={{
-					'& .MuiPaper-root': {
-						backgroundColor: theme.palette.background.default,
-						marginTop: '2px',
-						boxShadow: theme.shadows[4],
-					},
-				}}
-				disableScrollLock
-			>
-				<MenuItem
-					sx={{
-						'&:hover': {
-							backgroundColor: theme.primary,
-						},
-					}}
-					onClick={() => handleClose('en')}
-				>
-					<Box
-						component={'span'}
-						className={`flag-icon flag-icon-gb`}
-						sx={{ marginRight: theme.spacing(1) }}
-					/>
-					EN
-				</MenuItem>
-				<MenuItem
-					sx={{
-						'&:hover': {
-							backgroundColor: theme.backgroundSecondary,
-						},
-					}}
-					onClick={() => handleClose('es')}
-				>
-					<Box
-						component={'span'}
-						className={`flag-icon flag-icon-es`}
-						sx={{ marginRight: theme.spacing(1) }}
-					/>
-					ES
-				</MenuItem>
-			</Menu>
-		</Box>
-	);
+    const currentLanguage = languages.find(
+        (elem) => elem.code === t('language')
+    );
+
+    return (
+        <Box {...props}>
+            <Button
+                variant='outlined'
+                color='primary'
+                onClick={(e) => setAnchorEl(e.currentTarget)}
+            >
+                {currentLanguage && (
+                    <>
+                        <Box
+                            component={'span'}
+                            sx={{ marginRight: theme.spacing(1) }}
+                            className={`flag-icon flag-icon-${currentLanguage.country_code}`}
+                        />
+                        {currentLanguage.name}
+                    </>
+                )}
+                <KeyboardArrowDownIcon sx={{ color: 'white' }} />
+            </Button>
+            <Menu
+                id='profile-menu'
+                anchorEl={anchorEl}
+                open={Boolean(anchorEl)}
+                onClose={() => setAnchorEl(null)}
+                keepMounted
+                elevation={0}
+                anchorOrigin={{
+                    vertical: 'bottom',
+                    horizontal: 'center',
+                }}
+                transformOrigin={{
+                    vertical: 'top',
+                    horizontal: 'center',
+                }}
+                sx={{
+                    '& .MuiPaper-root': {
+                        backgroundColor: theme.palette.background.default,
+                        marginTop: '2px',
+                        boxShadow: theme.shadows[4],
+                    },
+                }}
+                disableScrollLock
+            >
+                <MenuItem
+                    sx={{
+                        '&:hover': {
+                            backgroundColor: theme.primary,
+                        },
+                    }}
+                    onClick={() => handleClose('en')}
+                >
+                    <Box
+                        component={'span'}
+                        className={`flag-icon flag-icon-gb`}
+                        sx={{ marginRight: theme.spacing(1) }}
+                    />
+                    EN
+                </MenuItem>
+                <MenuItem
+                    sx={{
+                        '&:hover': {
+                            backgroundColor: theme.backgroundSecondary,
+                        },
+                    }}
+                    onClick={() => handleClose('es')}
+                >
+                    <Box
+                        component={'span'}
+                        className={`flag-icon flag-icon-es`}
+                        sx={{ marginRight: theme.spacing(1) }}
+                    />
+                    ES
+                </MenuItem>
+            </Menu>
+        </Box>
+    );
 };
 
 // const CustomSpan = styled('span')(({ theme }) => ({

@@ -108,14 +108,14 @@ const ExtendedCard = ({
                     </IconButton>
                 </Box>
             </MuiCard>
-            <motion.div
+            {/* <motion.div
                 style={classes.container}
                 variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
                 intial='hidden'
                 animate='visible'
                 exit='hidden'
                 onClick={() => handleClose()}
-            ></motion.div>
+            ></motion.div> */}
         </Box>
     );
 };
@@ -149,11 +149,12 @@ const useStyles = (theme) => ({
         marginTop: `calc( ${theme.navbarHeight} + 20px )`,
         width: '100%',
         maxWidth: '600px',
-        height: 'auto',
-        maxHeight: 'auto',
+        height: '600px',
+        maxHeight: '90%',
         zIndex: '10000',
         boxShadow: theme.shadows[10],
         backgroundColor: theme.palette.secondary.main,
+        overflow: 'scroll',
     },
     media: {
         height: '100%',
@@ -161,7 +162,7 @@ const useStyles = (theme) => ({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'flex-start',
-        overflow: 'hidden',
+        // overflow: 'hidden',
     },
     frontImage: {
         marginTop: '20px',

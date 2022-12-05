@@ -24,13 +24,13 @@
 
     "experience_1_job": "Asistente de computación",
     "experience_1_overview": "Asesoría y apoyo con el uso correcto de los activos TI al personal administrativo. Mantener y actualizar la información publicada en la página web de la entidad.Administrar el uso correcto de la infraestructura de red de la entidad.",
-    "experience_1_duration": "Julio 2021 - December 2021",
+    "experience_1_duration": "Julio 2021 - Diciembre 2021",
 
     "experience_2_job": "Becario de ingeniería de software",
     "experience_2_overview": "Desarrollar sistemas y herramientas con énfasis en el rendimiento y la escalabilidad, mantener bases de datos, documentos funcionales y técnicos.Incremente el rendimiento de las aplicaciones en un 35% a través del correcto uso de los patrones de diseño y buenas prácticas de manejo de datos.Desarrolle un sistema de información para la gestión administrativa y logística de empresas comerciales.",
     "experience_2_duration": "Febrero 2019 - Mayo 2019",
 
-    "projects_1_overview": "Aplicacion Web para la gestion de resetas de cocina.",
+    "projects_1_overview": "Aplicación Web para la gestion de resetas de cocina.",
     "projects_1_extended_overview": "Proyecto individual desarrollado dentro de Henry Bootcamp Desarrollo de una SPA (Single Page Application) utilizando React para el Front End y Redux como state management. Todos los componentes fueron desarrollados con CSS sin uso de librerías externas. La SPA consume datos de una API (“Spoonacular API”) a través de un Back End desarrollado en Node.JS utilizando Express, agregando nuevas funcionalidades a la API original como el uso del ORM Sequelize para poder conectarse a una base de datos PostgresSQL y porder almacenar los datos creados por el usuario.",
 
     "projects_2_overview": "GameScript es una plataforma de venta y compra de videojuegos.",
