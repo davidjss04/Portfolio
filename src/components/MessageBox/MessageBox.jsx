@@ -172,8 +172,7 @@ const MessageBox = () => {
                                 transition={{ delay: 1.5, duration: 1 }}
                                 variant='body2'
                             >
-                                Tu mensaje ha sido enviado con éxito, nos
-                                pondremos en contacto contigo lo antes posible.
+                                {t('message_sent_success')}
                             </Typography>
                         </Box>
                     )}

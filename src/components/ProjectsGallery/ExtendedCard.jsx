@@ -6,6 +6,7 @@ import {
     Typography,
     IconButton,
     Box,
+    useMediaQuery,
 } from '@mui/material';
 import { Close } from '@mui/icons-material';
 import { motion } from 'framer-motion';
@@ -24,7 +25,8 @@ const ExtendedCard = ({
     ...rest
 }) => {
     const theme = useTheme();
-    const classes = useStyles(theme);
+    const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+    const classes = useStyles(theme, isMobile);
 
     return (
         <Box sx={classes.wrapper}>
@@ -87,13 +89,19 @@ const ExtendedCard = ({
                                 }}
                             >
                                 {links.github && (
-                                    <IconButton sx={classes.iconButton} href={links.github}>
+                                    <IconButton
+                                        sx={classes.iconButton}
+                                        href={links.github}
+                                    >
                                         <GitHub sx={{ fontSize: 40 }} />
                                     </IconButton>
                                 )}
 
                                 {links.url && (
-                                    <IconButton sx={classes.iconButton} href={links.url}>
+                                    <IconButton
+                                        sx={classes.iconButton}
+                                        href={links.url}
+                                    >
                                         <Language sx={{ fontSize: 40 }} />
                                     </IconButton>
                                 )}
@@ -104,23 +112,23 @@ const ExtendedCard = ({
                         sx={classes.closeBtn}
                         onClick={() => handleClose()}
                     >
-                        <Close />
+                        <Close sx={{ fontSize: '40px' }} />
                     </IconButton>
                 </Box>
             </MuiCard>
-            {/* <motion.div
+            <motion.div
                 style={classes.container}
                 variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
                 intial='hidden'
                 animate='visible'
                 exit='hidden'
                 onClick={() => handleClose()}
-            ></motion.div> */}
+            ></motion.div>
         </Box>
     );
 };
 
-const useStyles = (theme) => ({
+const useStyles = (theme, isMobile) => ({
     wrapper: {
         position: 'fixed',
         overflow: 'scroll',
@@ -149,12 +157,12 @@ const useStyles = (theme) => ({
         marginTop: `calc( ${theme.navbarHeight} + 20px )`,
         width: '100%',
         maxWidth: '600px',
-        height: '600px',
-        maxHeight: '90%',
+        height: isMobile ? '500px' : 'auto',
+        maxHeight: isMobile ? '500px' : 'auto',
         zIndex: '10000',
         boxShadow: theme.shadows[10],
         backgroundColor: theme.palette.secondary.main,
-        overflow: 'scroll',
+        overflow: isMobile ? 'scroll' : 'hidden',
     },
     media: {
         height: '100%',
@@ -191,7 +199,7 @@ const useStyles = (theme) => ({
         top: 0,
         right: 0,
         margin: '2px',
-        color: 'white',
+        color:  theme.palette.text.primary,
     },
     iconButton: {
         color: 'white',

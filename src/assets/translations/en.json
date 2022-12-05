@@ -2,10 +2,10 @@
     "language": "en",
     "dark_mode": "Dark mode",
 
-    "home_welcome": "Hi, I'm David Huaricancha.",
-    "home_what_i_do": "I build amazing things for the web.",
+    "home_welcome": "Hi 👋, I'm David Huaricancha. 👨‍💻",
+    "home_what_i_do": "I build amazing things for the web. 👷‍♂️ 🚀",
     "home_my_jobs": "I'm a Software Engineer.,I'm a Web Developer.,I'm a React Developer.,I'm a Frontend Developer.,I'm an Open Source Contributor.,I'm a Technology Enthusiast.",
-    "home_btn_contact": "Contact me",
+    "home_btn_contact": "Contact me 🤙",
 
     "menu_about": "About me",
     "menu_projects": "Projects",
@@ -31,16 +31,18 @@
     "experience_2_duration": "February 2019 - May 2019",
 
     "projects_1_overview": "Web application for managing cooking recipes.",
-    "projects_1_extended_overview": "Proyecto individual desarrollado dentro de Henry Bootcamp Desarrollo de una SPA (Single Page Application) utilizando React para el Front End y Redux como state management. Todos los componentes fueron desarrollados con CSS sin uso de librerías externas. La SPA consume datos de una API (“Spoonacular API”) a través de un Back End desarrollado en Node.JS utilizando Express, agregando nuevas funcionalidades a la API original como el uso del ORM Sequelize para poder conectarse a una base de datos PostgresSQL y porder almacenar los datos creados por el usuario.",
+    "projects_1_extended_overview": "Individual project developed within Henry Bootcamp Development of a SPA (Single Page Application) using React for the Front End and Redux as state management. All components were developed with CSS without the use of external libraries. The SPA consumes data from an API (“Spoonacular API”) through a Back End developed in Node.JS using Express, adding new features to the original API such as the use of the ORM Sequelize to be able to connect to a PostgresSQL database and can store the data created by the user.",
 
-    "projects_2_overview": "GameScript es una plataforma de venta y compra de videojuegos.",
-    "projects_2_extended_overview": "Proyecto Grupal desarrollado dentro de Henry Bootcamp Desarrollo de un E-COMMERCE, para la venta y compra de Videojuego utilizando React para el Front End y Redux Toolkit como state management. Todos los componentes fueron estilizados con el Framework Material UI. La App consume datos a través de un Back End desarrollado en Node.JS utilizando Express, y para la conexión a la base de datos se utilizó el ORM Sequelize con el motor de base de datos PostgresSQL. Mi aporte principal al proyecto fue la parte del Front End, aplicando buenas practicas de Front End, estilizando componentes con Material UI, reutilizando componentes y aplicando Stripe para el metodo de pago.",
+    "projects_2_overview": "GameScript is a platform for buying and selling video games.",
+    "projects_2_extended_overview": "Group project developed within Henry Bootcamp Development of an E-COMMERCE, for the purchase and sale of Video Games using React for the Front End and Redux Toolkit as state management. All components were designed using the Material UI Framework. The App consumes data through a Back End developed in Node.JS using Express, and for the connection to the database the Sequelize ORM with the PostgresSQL database engine was used. My main contribution to the project was the Front End part, applying good Front End practices, styling components with Material UI, reusing components and applying Stripe for the payment method.",
 
-    "projects_3_overview": "Portfolio personal. Una pagina web para mostrar mis proyectos.",
-    "projects_3_extended_overview": "Proyecto individual desarrollador con React, Material UI y CSS. El objetivo de este proyecto es mostrar mis proyectos y habilidades como desarrollador Front End. La pagina consume datos de un archivo JSON para mostrar los proyectos y sus detalles. La pagina esta optimizada para dispositivos moviles y desktop.",
+    "projects_3_overview": "Personal portfolio. A web page to show my projects.",
+    "projects_3_extended_overview": "Individual developer project with React, Material UI and CSS. The objective of this project is to show my projects and skills as a Front End developer. The page consumes data from a JSON file to display the projects and their details. The page is optimized for mobile and desktop devices.",
 
-    "contact_full_name": "Nombre Completo",
-    "contact_email": "Correo Electrónico",
-    "contact_message": "Mensaje",
-    "contact_btn": "Enviar Mensaje"
+    "contact_full_name": "Full Name",
+    "contact_email": "Email Address",
+    "contact_message": "Message",
+    "contact_btn": "Send Message",
+
+    "message_sent_success": "You message has been sent successfully! I will get back to you as soon as possible."
 }

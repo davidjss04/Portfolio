@@ -20,7 +20,7 @@ const Footer = () => {
             <Box sx={classes.footer}>
                 {isMobile && <Social mobile />}
                 <Typography variant='body2' color='text'>
-                    © 2022 David Huaricancha
+                    © 2022 David Huaricancha. @davidjss04
                 </Typography>
             </Box>
         </Container>

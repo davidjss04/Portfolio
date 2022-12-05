@@ -9,20 +9,6 @@ import { loaderContext, themeContext } from './contexts';
 function App() {
     const [isDarkMode, setIsDarkMode] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
-    const [language, setLanguage] = useState('en');
-
-    const comprobarIdioma = () => {
-        const browserLanguage = navigator.language || navigator.userLanguage;
-
-        if (browserLanguage.includes('es')) {
-            console.log('dentro del if');
-            setLanguage('es');
-        } else if (browserLanguage.includes('en')) {
-            setLanguage('en');
-        } else {
-            setLanguage('other');
-        }
-    };
 
     useEffect(() => {
         if (
@@ -33,8 +19,6 @@ function App() {
         } else {
             setIsDarkMode(false);
         }
-
-        comprobarIdioma();
     }, []);
 
     return (

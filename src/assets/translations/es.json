@@ -2,10 +2,10 @@
     "language": "es",
     "dark_mode": "Modo oscuro",
 
-    "home_welcome": "Hola, Yo soy David Huaricancha.",
-    "home_what_i_do": "Construyó cosas asombrosas para la web.",
+    "home_welcome": "Hola 👋, Yo soy David Huaricancha.",
+    "home_what_i_do": "Construyó cosas asombrosas para la web. 👷‍♂️ 🚀",
     "home_my_jobs": "Soy un Ingeniero de Software.,Soy un Desarrollador Web.,Soy un Desarrollador React.,Soy un Desarrollador Frontend.,Soy un Contribuidor de Open Source.,Soy un Entusiasta de la Tecnología.",
-    "home_btn_contact": "Contactame",
+    "home_btn_contact": "Contactame 🤙",
 
     "menu_about": "Sobre mi",
     "menu_projects": "Proyectos",
@@ -42,5 +42,7 @@
     "contact_full_name": "Nombre Completo",
     "contact_email": "Correo Electrónico",
     "contact_message": "Mensaje",
-    "contact_btn": "Enviar Mensaje"
+    "contact_btn": "Enviar Mensaje",
+
+    "message_sent_success": "¡Tu mensaje ha sido enviado con éxito! Me pondré en contacto contigo lo antes posible."
 }
