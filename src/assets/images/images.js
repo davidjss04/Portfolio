@@ -1,4 +1,4 @@
-import avatar from './avatar.jpg';
+import avatar from './avatar.png';
 import appfood from './appfood.jpg';
 import gamescript from './gamescript.jpg';
 import portfolio from './portfolio.jpg';

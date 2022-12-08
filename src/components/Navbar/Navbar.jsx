@@ -71,18 +71,19 @@ const Navbar = () => {
                                 <StyledTab
                                     component={AnimatedLink}
                                     to='about'
-                                    offset={-100}
+                                    spy={true}
+                                    smooth={true}
+                                    duration={500}
+                                    offset={-80}
                                     label={t('menu_about')}
-                                    onSetActive={() => spyHandleChange(0)}
-                                    onSetInactive={() => spyHandleChange(false)}
                                 />
                                 <StyledTab
+                                    component={AnimatedLink}
+                                    to='experience'
                                     spy={true}
                                     smooth={true}
                                     offset={-100}
                                     duration={500}
-                                    to='experience'
-                                    component={AnimatedLink}
                                     label={t('menu_experience')}
                                 />
                                 <StyledTab

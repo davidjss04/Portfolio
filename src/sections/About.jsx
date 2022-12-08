@@ -15,14 +15,14 @@ const About = () => {
         <SectionContainer id='about' title={t('menu_about')} maxWidth='md'>
             <Grid container spacing={0} rowSpacing={6} sx={{ width: '100%' }}>
                 {isMobile && (
-                    <Grid item xs={12} md={5} sx={gridItem}>
+                    <Grid item xs={12} md={4} sx={gridItem}>
                         <Avatar />
                     </Grid>
                 )}
                 <Grid
                     item
                     xs={12}
-                    md={7}
+                    md={8}
                     sx={{
                         ...gridItem,
                         flexDirection: 'column',
@@ -46,7 +46,7 @@ const About = () => {
                     <Skills />
                 </Grid>
                 {!isMobile && (
-                    <Grid item xs={10} md={5} sx={gridItem}>
+                    <Grid item xs={10} md={4} sx={gridItem}>
                         <Avatar />
                     </Grid>
                 )}

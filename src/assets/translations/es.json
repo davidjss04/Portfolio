@@ -13,10 +13,13 @@
     "menu_contact": "Contacto",
     "menu_resume": "Curriculum",
 
-    "about_desc_1": "Front End Developer con background como Ingeniero Informático. 👨‍💻 Experiencia trabajando en React, Redux, Material UI, Node.js, PostgreSQL entre otras tecnologías del sector. Forme parte de un equipo para la creación de un E-commerce de venta y compra de videojuegos fomentando buenas prácticas de programación y patrones de diseño que permiten un rendimiento óptimo para su posicionamiento en la red. Me caracterizo por la capacidad de resolución de problemas, trabajo en equipo, pensamiento creativo, comunicación y autonomía. 👬",
-    "about_desc_2": "Actualmente sigo profundizando mis conocimientos, aprendiendo nuevas tecnologías como TypeScript y Next.js, mejorando mi portafolio y realizando proyectos personales para que tengan un impacto positivo en la sociedad. Soy consiente de la relevancia que tiene el idioma ingles en esta industria, es por eso que sigo mejorando mi nivel. 👷‍♂️🏗",
-    "about_desc_3": "En mi tiempo libre, me deleito con los placeres de la vida, como salir a manejar bicicleta, 🚴‍♂️ ir al gimnasio,🏋️‍♂️ o tomar un café. ☕ (Me encanta el café ❣) Disfruto descubriendo los secretos de la vida a través de la lectura 📚 y entiendo que siempre nos encontramos en un desarrollo 🧘‍♂️ y que mejor que aprenderlo de los demás. No revientes la rueda. 🌀",
-    "about_desc_4": "No dude en enviarme un mensaje si desea saber más acerca de mí. Siempre estoy ansioso por saber de los demás y expandir mi red en LinkedIn. ¿Te gusta el café, la lectura, viajar o bailar? Charlemos un rato de eso. Skills 👇",
+    "about_desc_1": "Front End Developer con background como Ingeniero Informático. 👨‍💻 Mi interés en el desarrollo de software comenzó en mi primer ciclo de la universidad, me fascinó la idea de automatizar las tareas mediante la programación. 🚀",
+
+    "about_desc_2": "Actualmente, estoy en la búsqueda de una oportunidad laboral, también me encuentro mejorando mi portafolio y realizando proyectos personales. Soy consiente de la relevancia que tiene el idioma inglés en esta industria, es por eso que sigo mejorando mi nivel.👷‍♂️",
+
+    "about_desc_3": "Me gusta salir a manejar bicicleta, 🚴‍♂️ ir al gimnasio 🏋️‍♂️, o tomar un café ☕. Disfruto descubriendo los secretos de la vida a través de la lectura 📚 y entiendo que siempre nos encontramos en un desarrollo 🧘‍♂️ y que mejor que aprenderlo de los demás. No revientes la rueda. 🌀",
+
+    "about_desc_4": "Esta son algunas tecnologías con las que he estado trabajando últimamente 👇:",
 
     "experience_0_job": "Front End Developer [Academic]",
     "experience_0_overview": "Bootcamp de 6 meses de duración, enfocado en el desarrollo de aplicaciones web con React, Redux, Node.js, Express, PostgreSQL, entre otras tecnologías. Realice proyectos personales y colaborativos para mejorar mis habilidades y conocimientos. 🚀  Trabaje con la metodología SCRUM, utilizando herramientas como Trello y Slack para la comunicación y organización del equipo. 📝",

@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Box, Paper } from "@mui/material";
+import { Typography, Paper } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { skillsList } from "../../data";
 
@@ -21,7 +21,7 @@ const Skills = () => {
 };
 
 const StyledContainer = styled("div")(({ theme }) => ({
-  maxWidth: "600px",
+  maxWidth: "700px",
   display: "flex",
   justifyContent: "flex-start",
   gap: "5px",

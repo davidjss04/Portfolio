@@ -56,12 +56,13 @@ const Menu = ({ resume }) => {
                 <Box component='div' sx={{ width: 250 }} role='presentation'>
                     <StyledList>
                         <StyledListItem
-                            component={AnimatedLink}
                             to='about'
+                            spy={true}
+                            smooth={true}
                             offset={-100}
+                            duration={500}
                             label={t('menu_about')}
-                            onSetActive={() => spyHandleChange(0)}
-                            onSetInactive={() => spyHandleChange(false)}
+                            component={AnimatedLink}
                         >
                             {t('menu_about')}
                         </StyledListItem>
