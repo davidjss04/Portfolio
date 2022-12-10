@@ -65,15 +65,15 @@ const darkTheme = createTheme({
 const lightTheme = createTheme({
     palette: {
         background: {
-            default: '#0a192f',
+            default: '#022C43',
         },
         primary: {
-            main: '#64ffda',
-            contrastText: '#fff',
+            main: '#FFD700',
+            contrastText: '#F4F4F4',
         },
         secondary: {
-            main: '#112240',
-            contrastText: 'rgb(230,230,230)',
+            main: '#053F5E',
+            contrastText: '#F4F4F4',
         },
         text: {
             primary: '#ccd6f6',
@@ -86,9 +86,9 @@ const lightTheme = createTheme({
     },
     backgroundSecondary: {
         bg: '#112240',
-        text: 'rgb(230,230,230) ',
+        text: '#F4F4F4',
     },
-    logoColor: '#64ffda',
+    logoColor: '#FFD700',
     ...baseTheme,
 });
 
