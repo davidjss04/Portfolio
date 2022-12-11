@@ -28,7 +28,7 @@
 
     "experience_2_job": "Software Engineering Internship",
     "experience_2_overview": "Advice and support with the correct use of IT assets to administrative staff. Maintain and update the information published on the entity's website. Manage the correct use of the entity's network infrastructure.",
-    "experience_2_duration": "February 2019 - May 2019",
+    "experience_2_duration": "February 2020 - May 2020",
 
     "projects_1_overview": "Web application for managing cooking recipes.",
     "projects_1_extended_overview": "Individual project developed within Henry Bootcamp Development of a SPA (Single Page Application) using React for the Front End and Redux as state management. All components were developed with CSS without the use of external libraries. The SPA consumes data from an API (“Spoonacular API”) through a Back End developed in Node.JS using Express, adding new features to the original API such as the use of the ORM Sequelize to be able to connect to a PostgresSQL database and can store the data created by the user.",
