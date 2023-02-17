@@ -4,7 +4,7 @@
 
     "home_welcome": "Hi 👋, I'm David Huaricancha. 👨‍💻",
     "home_what_i_do": "I build amazing things for the web. 👷‍♂️ 🚀",
-    "home_my_jobs": "I'm a Software Engineer.-I'm a Web Developer.-I'm a React Developer.-I'm a Frontend Developer.-I'm an Open Source Contributor.-I'm a Technology Enthusiast.-Coffee, books and exercise lover.",
+    "home_my_jobs": "I'm a Software Engineer.-I'm a Web Developer.-I'm a Technology Enthusiast.-Coffee, books and exercise lover.",
     "home_btn_contact": "Contact me 🤙",
 
     "menu_about": "About me",
@@ -18,17 +18,22 @@
     "about_desc_3": "I like riding a bike, 🚴‍♂️ going to the gym 🏋️‍♂️ and take a coffee ☕. I enjoy discovering the secrets of life through reading 📚 and I understand that we are always developing ♂️ 🧘 and what better than learning from others. Don't break the wheel. 🌀",
     "about_desc_4": "These are some technologies I've been working with lately 👇:",
 
-    "experience_0_job": "Front End Developer [Academic]",
-    "experience_0_overview": "6-month bootcamp, focused on the development of web applications with React, Redux, Node.js, Express, PostgreSQL, among other technologies. Carry out personal and collaborative projects to improve my skills and knowledge. 🚀 Work with the SCRUM methodology, using tools such as Trello and Slack for team communication and organization. 📝",
-    "experience_0_duration": "Octover 2022 - November 2022",
+    "experience_0_job": "Salesforce Developer",
+    "experience_0_overview": "Develop systems and tools with an emphasis on performance and scalability, aimed at business customers with the Salesforce business ecosystem.",
+    "experience_0_duration": "February 2023 - Now",
 
-    "experience_1_job": "Aomputer Assistant",
-    "experience_1_overview": "I was in charge of the maintenance of the computer equipment of the company, as well as the installation of new equipment. I also provided technical support to the users of the company. 🖥️",
-    "experience_1_duration": "July 2021 - December 2021",
+    "experience_1_job": "Front End Developer [Academic]",
+    "experience_1_overview": "6-month bootcamp, focused on the development of web applications with React, Redux, Node.js, Express, PostgreSQL, among other technologies. Carry out personal and collaborative projects to improve my skills and knowledge. 🚀 Work with the SCRUM methodology, using tools such as Trello and Slack for team communication and organization. 📝",
+    "experience_1_duration": "Octover 2022 - November 2022",
 
-    "experience_2_job": "Software Engineering Internship",
-    "experience_2_overview": "Advice and support with the correct use of IT assets to administrative staff. Maintain and update the information published on the entity's website. Manage the correct use of the entity's network infrastructure.",
-    "experience_2_duration": "February 2020 - May 2020",
+    "experience_2_job": "Aomputer Assistant",
+    "experience_2_overview": "I was in charge of the maintenance of the computer equipment of the company, as well as the installation of new equipment. I also provided technical support to the users of the company. 🖥️",
+    "experience_2_duration": "July 2021 - December 2021",
+
+    "experience_3_job": "Software Engineering Internship",
+    "experience_3_overview": "Advice and support with the correct use of IT assets to administrative staff. Maintain and update the information published on the entity's website. Manage the correct use of the entity's network infrastructure.",
+    "experience_3_duration": "February 2020 - May 2020",
+
 
     "projects_1_overview": "Web application for managing cooking recipes.",
     "projects_1_extended_overview": "Individual project developed within Henry Bootcamp Development of a SPA (Single Page Application) using React for the Front End and Redux as state management. All components were developed with CSS without the use of external libraries. The SPA consumes data from an API (“Spoonacular API”) through a Back End developed in Node.JS using Express, adding new features to the original API such as the use of the ORM Sequelize to be able to connect to a PostgresSQL database and can store the data created by the user.",

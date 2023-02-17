@@ -108,7 +108,7 @@ const Menu = ({ resume }) => {
                     }}
                     role='presentation'
                 >
-                    <Button
+                    {/* <Button
                         component={MuiLink}
                         target='_blank'
                         rel='noopener noreferrer'
@@ -121,7 +121,7 @@ const Menu = ({ resume }) => {
                         underline='none'
                     >
                         {'RESUMEN'}
-                    </Button>
+                    </Button> */}
                     <LangSelector
                         style={{ marginTop: '20px', marginBottom: '30px' }}
                     />

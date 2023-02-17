@@ -105,7 +105,7 @@ const Navbar = () => {
                                     label={t('menu_contact')}
                                 />
                             </StyledTabs>
-                            <Button
+                            {/* <Button
                                 component={MuiLink}
                                 target='_blank'
                                 rel='noopener noreferrer'
@@ -117,7 +117,7 @@ const Navbar = () => {
                                 onClick={handleResume}
                             >
                                 {t('menu_resume')}
-                            </Button>
+                            </Button> */}
                             <LangSelector style={{ marginLeft: '32px' }} />
                         </>
                     )}

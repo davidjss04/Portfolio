@@ -4,7 +4,7 @@
 
     "home_welcome": "Hola 👋, Yo soy David Huaricancha. 👨‍💻",
     "home_what_i_do": "Construyo cosas asombrosas para la web. 👷‍♂️ 🚀",
-    "home_my_jobs": "Soy un Ingeniero de Software.-Soy un Desarrollador Web.-Soy un Desarrollador React.-Soy un Desarrollador Frontend.-Soy un Contribuidor de Open Source.-Soy un Entusiasta de la Tecnología.-Amante del café, los libros y el ejercicio.",
+    "home_my_jobs": "Soy un Ingeniero de Software.-Soy un Entusiasta de la Tecnología.-Amante del café, los libros y el ejercicio.",
     "home_btn_contact": "Contactame 🤙",
 
     "menu_about": "Sobre mi",
@@ -21,17 +21,22 @@
 
     "about_desc_4": "Esta son algunas tecnologías con las que he estado trabajando últimamente 👇:",
 
-    "experience_0_job": "Front End Developer [Academic]",
-    "experience_0_overview": "Bootcamp de 6 meses de duración, enfocado en el desarrollo de aplicaciones web con React, Redux, Node.js, Express, PostgreSQL, entre otras tecnologías. Realice proyectos personales y colaborativos para mejorar mis habilidades y conocimientos. 🚀  Trabaje con la metodología SCRUM, utilizando herramientas como Trello y Slack para la comunicación y organización del equipo. 📝",
-    "experience_0_duration": "Octubre 2022 - Noviembre 2022",
+    "experience_0_job": "Salesforce Developer",
+    "experience_0_overview": "Desarrollar sistemas y herramientas con énfasis en el rendimiento y la escalabilidad, orientado a clientes empresariales con el ecosistema de negocio de Salesforce.",
+    "experience_0_duration": "Febrero 2023 - Actualmente",
 
-    "experience_1_job": "Asistente de computación",
-    "experience_1_overview": "Asesoría y apoyo con el uso correcto de los activos TI al personal administrativo. Mantener y actualizar la información publicada en la página web de la entidad.Administrar el uso correcto de la infraestructura de red de la entidad.",
-    "experience_1_duration": "Julio 2021 - Diciembre 2021",
+    "experience_1_job": "Front End Developer [Academic]",
+    "experience_1_overview": "Bootcamp de 6 meses de duración, enfocado en el desarrollo de aplicaciones web con React, Redux, Node.js, Express, PostgreSQL, entre otras tecnologías. Realice proyectos personales y colaborativos para mejorar mis habilidades y conocimientos. 🚀  Trabaje con la metodología SCRUM, utilizando herramientas como Trello y Slack para la comunicación y organización del equipo. 📝",
+    "experience_1_duration": "Octubre 2022 - Noviembre 2022",
 
-    "experience_2_job": "Becario de ingeniería de software",
-    "experience_2_overview": "Desarrollar sistemas y herramientas con énfasis en el rendimiento y la escalabilidad, mantener bases de datos, documentos funcionales y técnicos.Incremente el rendimiento de las aplicaciones en un 35% a través del correcto uso de los patrones de diseño y buenas prácticas de manejo de datos.Desarrolle un sistema de información para la gestión administrativa y logística de empresas comerciales.",
-    "experience_2_duration": "Febrero 2020 - Mayo 2020",
+    "experience_2_job": "Asistente de computación",
+    "experience_2_overview": "Asesoría y apoyo con el uso correcto de los activos TI al personal administrativo. Mantener y actualizar la información publicada en la página web de la entidad.Administrar el uso correcto de la infraestructura de red de la entidad.",
+    "experience_2_duration": "Julio 2021 - Diciembre 2021",
+
+    "experience_3_job": "Becario de ingeniería de software",
+    "experience_3_overview": "Desarrollar sistemas y herramientas con énfasis en el rendimiento y la escalabilidad, mantener bases de datos, documentos funcionales y técnicos.Incremente el rendimiento de las aplicaciones en un 35% a través del correcto uso de los patrones de diseño y buenas prácticas de manejo de datos.Desarrolle un sistema de información para la gestión administrativa y logística de empresas comerciales.",
+    "experience_3_duration": "Febrero 2020 - Mayo 2020",
+
 
     "projects_1_overview": "Aplicación Web para la gestion de resetas de cocina.",
     "projects_1_extended_overview": "Proyecto individual desarrollado dentro de Henry Bootcamp Desarrollo de una SPA (Single Page Application) utilizando React para el Front End y Redux como state management. Todos los componentes fueron desarrollados con CSS sin uso de librerías externas. La SPA consume datos de una API (“Spoonacular API”) a través de un Back End desarrollado en Node.JS utilizando Express, agregando nuevas funcionalidades a la API original como el uso del ORM Sequelize para poder conectarse a una base de datos PostgresSQL y porder almacenar los datos creados por el usuario.",

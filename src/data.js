@@ -67,6 +67,15 @@ const projectList = [
 const experienceList = [
     {
         id: 0,
+        company: 'NTT Data',
+        links: {
+            website: 'https://nttdata.com',
+            facebook: 'https://www.facebook.com/nttdata.latam',
+            instagram: 'https://www.instagram.com/nttdata.latam',
+        },
+    },
+    {
+        id: 1,
         company: 'Henry',
         links: {
             instagram: 'https://www.instagram.com/soyhenry_ok/',
@@ -75,7 +84,7 @@ const experienceList = [
         },
     },
     {
-        id: 1,
+        id: 2,
         company: 'M.P.T',
         links: {
             website: 'https://www.gob.pe/munitambopata',
@@ -83,7 +92,7 @@ const experienceList = [
         },
     },
     {
-        id: 2,
+        id: 3,
         company: 'Babas.devel',
         links: {
             website: 'https://facturadorbabas.com/facturacion/login',
